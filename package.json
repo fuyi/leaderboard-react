@@ -1,0 +1,38 @@
+{
+  "name": "sparta",
+  "version": "1.0.0",
+  "dependencies": {
+    "browserify": "latest",
+    "browserify-shim": "latest",
+    "jquery": "2.1.x",
+    "reactify": "latest",
+    "react": "latest",
+    "watchify": "latest",
+    "lodash": "^3.8.0",
+    "react-number-easing": "0.0.1",
+    "firebase": "^2.2.4",
+    "reactfire": "^0.4.0"
+  },
+  "scripts": {
+    "watch": "./node_modules/.bin/watchify -t [ reactify ] -t [ browserify-shim ] ./public/js/app.js -o ./public/js/bundle.js -v"
+  },
+  "browser": {
+    "pusher": "./pusher.js"
+  },
+  "browserify-shim": {
+    "pusher": {
+      "exports": "Pusher"
+    }
+  },
+  "devDependencies": {
+    "less": "^2.5.0",
+    "grunt": "~0.4.5",
+    "grunt-cli": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "jit-grunt": "~0.7.0",
+    "reactify": "^1.1.1"
+  }
+}
