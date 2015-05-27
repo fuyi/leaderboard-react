@@ -11,7 +11,8 @@
     "lodash": "^3.8.0",
     "react-number-easing": "0.0.1",
     "firebase": "^2.2.4",
-    "reactfire": "^0.4.0"
+    "reactfire": "^0.4.0",
+    "flux": "^2.0.3"
   },
   "scripts": {
     "watch": "./node_modules/.bin/watchify -t [ reactify ] -t [ browserify-shim ] ./public/js/app.js -o ./public/js/bundle.js -v"

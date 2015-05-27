@@ -1,4 +1,4 @@
 var React = require("react");
-var Leaderboard = require("./leaderboard/leaderboard.jsx");
+var Leaderboard = require("./components/leaderboard.jsx");
 
 React.render(<Leaderboard />, document.getElementById('leaderboard'));
