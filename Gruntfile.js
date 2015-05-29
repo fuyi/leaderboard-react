@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         }
       },
       react: {
-        files: ['public/**/*.jsx'],
+        files: ['public/js/**/*.jsx', 'public/js/**/*.js','!public/js/bundle.js'], //exclude bundle file to watch
         tasks: ['browserify'],
         options: {
           livereload: true

@@ -1,7 +1,14 @@
-var React = require("react");
-var _ = require("lodash");
-var Firebase = require("firebase");
+/*
+ * Copyright (c) 2015, minus1.se
+ * All rights reserved.
+ *
+ *
+ * AddMember Component
+ */
 
+var React = require("react");
+var LBConstants = require('../constants/LeaderboardConstants');
+var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 var AddMember = React.createClass({
 
@@ -12,15 +19,17 @@ var AddMember = React.createClass({
       return;
     }
     React.findDOMNode(this.refs.cm_name).value = '';
-    // create new cm
-    this.firebaseRef = new Firebase("https://resplendent-inferno-6893.firebaseio.com/cms2");
-    this.firebaseRef.push({
-      name: cm_name,
-      profile: "/public/images/thumb_default.jpg",
-      score: 0
-    }, function(){
-      console.log("new cm created!");
-    });
+
+    // dispatch LB_ADD_MEMBER Action
+    var action = {
+      actionType: LBConstants.LB_ADD_MEMBER,
+      cm: {
+        name: cm_name,
+        profile: "/public/images/thumb_default.jpg",
+        score: 0
+      }
+    };
+    AppDispatcher.dispatch(action);
 
   },
 

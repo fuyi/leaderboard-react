@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2015, minus1.se
+ * All rights reserved.
+ *
+ *
+ * CmsStore
+ */
+
 var keyMirror = require('keymirror');
 
 module.exports = keyMirror({

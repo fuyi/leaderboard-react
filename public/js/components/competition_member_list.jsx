@@ -1,7 +1,4 @@
 var React = require("react");
-var _ = require("lodash");
-// var ReactFireMixin = require("reactfire");
-var Firebase = require("firebase");
 var CompetitionMember = require("./competition_member.jsx");
 
 var MemberList = React.createClass({

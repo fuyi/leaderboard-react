@@ -1,8 +1,14 @@
+/*
+ * Copyright (c) 2015, minus1.se
+ * All rights reserved.
+ *
+ *
+ * AddScore Component
+ */
 var React = require("react");
 var _ = require("lodash");
-var Firebase = require("firebase");
-var firebaseRef = new Firebase("https://resplendent-inferno-6893.firebaseio.com/cms2");
-
+var LBConstants = require('../constants/LeaderboardConstants');
+var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 var AddScore = React.createClass({
 
@@ -20,11 +26,15 @@ var AddScore = React.createClass({
     React.findDOMNode(this.refs.score).value = '';
 
     var old_score = parseFloat(cm.value.score);
-    // console.log(old_score);
-    cmRef = firebaseRef.child(cm_key);
-    cmRef.update({
-      score: old_score+score
-    });
+    var new_score = old_score + score;
+
+    var action = {
+      actionType: LBConstants.LB_ADD_SCORE,
+      cm_key: cm_key,
+      score: new_score
+    };
+    AppDispatcher.dispatch(action);
+
   },
 
   render: function() {
