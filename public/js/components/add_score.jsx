@@ -42,7 +42,7 @@ var AddScore = React.createClass({
 
     if (this.props.cm_options) {
       this.props.cm_options.forEach(function(cm_option) {
-          options.push(<option value={cm_option.key}>{cm_option.value.name}</option>);
+          options.push(<option value={cm_option.key} key={cm_option.key}>{cm_option.value.name}</option>);
       });
     }
 

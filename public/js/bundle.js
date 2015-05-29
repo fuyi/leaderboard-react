@@ -33453,7 +33453,7 @@ var AddScore = React.createClass({displayName: "AddScore",
 
     if (this.props.cm_options) {
       this.props.cm_options.forEach(function(cm_option) {
-          options.push(React.createElement("option", {value: cm_option.key}, cm_option.value.name));
+          options.push(React.createElement("option", {value: cm_option.key, key: cm_option.key}, cm_option.value.name));
       });
     }
 
@@ -33511,7 +33511,7 @@ var MemberList = React.createClass({displayName: "MemberList",
     render: function() {
         var rows = [];
         this.props.cms.forEach(function(cm, index) {
-            rows.push(React.createElement(CompetitionMember, {cm: cm, position: index+1}));
+            rows.push(React.createElement(CompetitionMember, {cm: cm, key: index, position: index+1}));
         });
         return (
             React.createElement("table", {className: "table mbn"}, 
