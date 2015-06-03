@@ -11,7 +11,7 @@ var EventEmitter = require('events').EventEmitter;
 var LBConstants = require('../constants/LeaderboardConstants');
 var assign = require('object-assign');
 var _ = require("lodash");
-var Firebase = require('Firebase');
+var Firebase = require('firebase');
 var firebaseRef = new Firebase("https://resplendent-inferno-6893.firebaseio.com/cms2");
 
 var CHANGE_EVENT = 'change';
