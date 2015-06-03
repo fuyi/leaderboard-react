@@ -18,7 +18,11 @@
     "object-assign": "^2.0.0"
   },
   "scripts": {
-    "watch": "./node_modules/.bin/watchify -t [ reactify ] -t [ browserify-shim ] ./public/js/app.js -o ./public/js/bundle.js -v"
+    "watch": "./node_modules/.bin/watchify -t [ reactify ] -t [ browserify-shim ] ./public/js/app.js -o ./public/js/bundle.js -v",
+    "test": "jest"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": ["react"]
   },
   "browser": {
     "pusher": "./pusher.js"
@@ -37,6 +41,8 @@
     "grunt-contrib-less": "~0.11.0",
     "grunt-contrib-watch": "~0.6.1",
     "jit-grunt": "~0.7.0",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "jest": "^0.1.40",
+    "jest-cli": "^0.4.5"
   }
 }
