@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fuyi/leaderboard-react.svg?branch=master)](https://travis-ci.org/fuyi/leaderboard-react)
+
 # leaderboard-react
 A demo project to implement leaderboard with Reactjs + Firebase
 
